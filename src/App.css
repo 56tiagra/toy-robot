@@ -58,6 +58,7 @@
 .robot__controls__display {
   width: 700px;
   height: 200px;
+  overflow: scroll;
   background-color: var(--dark-grey);
   color: var(--white);
   padding: 10px;
