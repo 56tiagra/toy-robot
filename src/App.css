@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+:root {
+  --background-blue: #48919f;
+  --dark-grey: #2c3a47;
+  --white: #ffffff;
+  --primary-red: #e66767;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  padding: 20px;
+}
+.robot__table__container {
+  flex: 100%;
+  display: flex;
+  justify-content: center;
+}
+.robot__table {
+  width: 500px;
+  height: 500px;
+  border: 1px solid blue;
+  background:
+  -webkit-linear-gradient(top, transparent 99px, blue 100px),
+  -webkit-linear-gradient(left, transparent 99px, blue 100px)
+  ;
+  background-size: 100px 100px;
+  position: relative;
+}
+.robot {
+  position: absolute;
+  height: 99px;
+  width: 99px;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.robot__controls {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.robot__controls__display {
+  width: 700px;
+  height: 200px;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  padding: 10px;
+}
+.robot__controls__btn-group, .robot__controls__place-control {
+  width: 100%;
+  display: flex;
+  padding: 0 20%;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  display: inline-block;
+  padding: 12px 50px;
+  color: var(--primary-red);
+  border: 2px solid var(--primary-red);
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: .3s linear;
+}
+
+.btn:hover{
+  background: var(--primary-red);
+  color: var(--white);
+}
+
+input[type=number], select {
+  width: 120px;
+  padding: 12px 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
