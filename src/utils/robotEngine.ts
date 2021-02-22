@@ -39,23 +39,23 @@ export const calculateRotation = (facing: Direction): number => {
 
 export const move = (position: Position) => {
   let positionCopy = cloneDeep(position);
-  if(position.facing == FACING.NORTH && position.coordinate.y > 0) {
+  if(position.facing === FACING.NORTH && position.coordinate.y > 0) {
     positionCopy.coordinate.y--;
   }
-  else if(position.facing == FACING.SOUTH && position.coordinate.y < 4) {
+  else if(position.facing === FACING.SOUTH && position.coordinate.y < 4) {
     positionCopy.coordinate.y++;
   }
-  else if(position.facing == FACING.EAST && position.coordinate.x < 4) {
+  else if(position.facing === FACING.EAST && position.coordinate.x < 4) {
     positionCopy.coordinate.x++;
   }
-  else if(position.facing == FACING.WEST && position.coordinate.x > 0) {
+  else if(position.facing === FACING.WEST && position.coordinate.x > 0) {
     positionCopy.coordinate.x--;
   }
   return positionCopy;
 }
 
 export const convertFacingBasedOnRoation = (degree: number): Direction => {
-  if(degree%90!=0) {
+  if(degree%90!==0) {
     return FACING.NORTH as Direction;
   }
   switch (degree) {
@@ -77,7 +77,7 @@ export const rotate = (currentDegree: number, direction: string): number => {
     return 0
   }
   if (direction === ROTATE_DIRECTION.LEFT) {
-    if (currentDegree == 0) {
+    if (currentDegree === 0) {
       return 270;
     }
     return currentDegree - 90;

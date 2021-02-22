@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo
+For demo purpose, this application is deployed to [https://toy-robot-alex.netlify.app](https://toy-robot-alex.netlify.app)
+The continuous pipeline is from [https://github.com/56tiagra/toy-robot](https://github.com/56tiagra/toy-robot) to Netlify
+
 ## Available Scripts
 
 In the project directory, you can run:
