@@ -7,8 +7,8 @@ import {calculateRotation, convertFacingBasedOnRoation, Direction, FACING, move,
 function App() {
   const [position, setposition] = useState<Position>({
     coordinate: {
-      x: 1,
-      y: 1
+      x: 0,
+      y: 0
     },
     rotate: 0,
     facing: FACING.NORTH as Direction
@@ -19,7 +19,7 @@ function App() {
   const yCoordinate = useRef<any>(null)
   const facing = useRef<any>(null)
 
-  const placeRobot = () => {
+  const onPlaceClick = () => {
     const newCoordinate: Position = {
       coordinate: {
         x: parseInt(xCoordinate.current.value) || 0,
@@ -73,7 +73,7 @@ function App() {
             <option value={FACING.EAST}>East</option>
             <option value={FACING.WEST}>West</option>
           </select>
-          <button className="btn" onClick={placeRobot}>Place</button>
+          <button className="btn" onClick={onPlaceClick}>Place</button>
 
         </div>
         <hr />
