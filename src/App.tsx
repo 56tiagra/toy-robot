@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { cloneDeep } from 'lodash'
 import {calculateRotation, convertFacingBasedOnRoation, Direction, FACING, move, Position, rotate, ROTATE_DIRECTION} from './utils/robotEngine'
